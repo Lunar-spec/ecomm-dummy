@@ -1,13 +1,12 @@
-import './App.scss'
+import './App.css'
+import './ProductListing'
+import ProductListing from './ProductListing'
 
 function App() {
 
   return (
     <div>
-      <h1>Hello</h1>
-      <a href="#">Not going anywhere</a>
-      <br />
-      <button>Click</button>
+      <ProductListing/>
     </div>
   )
 }
