@@ -19,7 +19,6 @@ const ProductListing = () => {
         setIsLoading(true);
         setError(null);
 
-        // Build the API URL based on the selectedCategory
         let apiUrl = 'https://dummyjson.com/products';
         if (selectedCategory !== 'All') {
             apiUrl = `https://dummyjson.com/products/category/${selectedCategory}`;
@@ -79,14 +78,13 @@ const ProductListing = () => {
 
     const handleCategoryChange = (e) => {
         setSelectedCategory(e.target.value);
-        setLimit(6); // Reset the limit when changing categories
+        setLimit(6);
     };
 
     const openProductDetails = (product) => {
         setSelectedProduct(product);
     };
 
-    // Function to close the product details pop-up
     const closeProductDetails = () => {
         setSelectedProduct(null);
     };

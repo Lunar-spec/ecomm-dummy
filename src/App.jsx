@@ -1,5 +1,4 @@
 import './App.css'
-import './ProductListing'
 import ProductListing from './ProductListing'
 
 function App() {

@@ -9,10 +9,14 @@ const ProductDetailsPopup = ({ product, onClose }) => {
             <div className="popup-content">
                 <button className="close-button" onClick={onClose}>Close</button>
                 <h2>{product.title}</h2>
-                <img src={product.images[0]} alt={product.title} className="product-image" />
-                <img src={product.images[1]} alt={product.title} className="product-image" />
-                <img src={product.images[2]} alt={product.title} className="product-image" />
-                <img src={product.images[3]} alt={product.title} className="product-image" />
+                {product.images.map((image, index) => (
+                    <img
+                        key={index}
+                        src={image}
+                        alt={`${product.title} - Image ${index + 1}`}
+                        className="product-image"
+                    />
+                ))}
                 <p>{product.description}</p>
                 <p><span className='bold'>Brand:</span> {product.brand}</p>
                 <p><span className='bold'>Category:</span> {product.category}</p>
